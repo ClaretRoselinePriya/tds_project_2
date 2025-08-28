@@ -36,7 +36,7 @@ logger = logging.getLogger(__name__)
 @dataclass
 class AgentConfig:
     """Configuration for the Ultimate Data Analyst Agent."""
-    gemini_model: str = "gemini-1.5-pro"
+    gemini_model: str = "gemini-2.5-pro"
     max_tokens: int = 4000  # Increased for comprehensive analysis
     temperature: float = 0.2  # Lower for more consistent output
     execution_timeout: int = 180  # Increased timeout
