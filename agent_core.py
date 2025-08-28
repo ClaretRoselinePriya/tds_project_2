@@ -22,6 +22,14 @@ from typing import Dict, Any, Optional, List
 import logging
 from dataclasses import dataclass
 
+# Import OpenAI
+try:
+    from openai import OpenAI
+    OPENAI_AVAILABLE = True
+except ImportError:
+    OPENAI_AVAILABLE = False
+    OpenAI = None
+
 # Import Google Generative AI with retry support
 try:
     import google.generativeai as genai
